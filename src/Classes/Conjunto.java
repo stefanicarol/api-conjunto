@@ -6,6 +6,7 @@
 package Classes;
 
 import java.util.ArrayList;
+import Classes.verificacao.uniao;
 
 /**
  *
@@ -16,25 +17,21 @@ import java.util.ArrayList;
 public class Conjunto {
     
     private String nome;
-    private String elemento;
     ArrayList<String> elementos = new ArrayList();
 
     public Conjunto() {
         
     }
-
+    
     public Conjunto(String nome) {
         this.nome = nome;
     }
-
     
+   
     public String getNome() {
         return nome;
     }
 
-    public String getElemento() {
-        return elemento;
-    }
 
     public ArrayList<String> getElementos() {
         return elementos;
@@ -44,9 +41,6 @@ public class Conjunto {
         this.nome = nome;
     }
 
-    public void setElemento(String elemento) {
-        this.elemento = elemento;
-    }
 
     public void setElementos(ArrayList<String> elementos) {
         this.elementos = elementos;
@@ -73,9 +67,9 @@ public class Conjunto {
     }
     
     
-    public Boolean contem(ArrayList conjList){
+    public Boolean contem(ArrayList listElementos){
         Boolean status = true;
-            for(Object el:conjList){
+            for(Object el:listElementos){
                 if(elementos.contains(el)){
                     status = true;     
                 }
@@ -84,11 +78,21 @@ public class Conjunto {
                 }
             }
             return status;
-            }         
+            }   
     
     
-    
-    
+    public String uniao(ArrayList listElementos){
+        
+        if (uniao.elementoNeutro(elementos,listElementos).equals(true)){
+            return imprimir();
+        }
+        
+        if(uniao.idempotencia(elementos,listElementos).equals(true)){
+            return imprimir();
+        }
+        
+        
+    }
     
     
     
