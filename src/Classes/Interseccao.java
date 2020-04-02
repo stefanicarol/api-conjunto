@@ -32,8 +32,7 @@ public class Interseccao {
     
     
     
-    public Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){
-            
+    public Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){ 
             Boolean status = null;
             for(Object i: listInterno){
                 if(listExterno.equals(i)){
@@ -45,6 +44,28 @@ public class Interseccao {
             }
             return status;  
         }
+    
+    public ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
+            ArrayList<String> A_u_B = listInterno;
+            
+            for(Object i: listExterno){
+                A_u_B.add((String) i);      //AuB
+            }
+            return A_u_B;
+            
+        }
+    
+    public ArrayList Interseccao(ArrayList listInterno, ArrayList listExterno){
+        ArrayList<String> Result = new ArrayList();
+        
+        for(Object i:listExterno){
+            if(listExterno.equals(i)){
+                Result.add((String) i);
+            }   
+        }
+        
+        return Result;
+    }
     
     
     

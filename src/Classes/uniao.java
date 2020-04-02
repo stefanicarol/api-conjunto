@@ -20,7 +20,7 @@ public class uniao {
      
        
         
-        public boolean elementoNeutro(ArrayList listExterno){
+        public static boolean elementoNeutro(ArrayList listExterno){
             String status = null;
             if(listExterno == null){
                 return true;  
@@ -30,7 +30,7 @@ public class uniao {
         
         
         
-        public Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){
+        public static Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){
             Boolean status = null;
             for(Object i: listInterno){
                 if(listExterno.equals(i)){
@@ -44,7 +44,7 @@ public class uniao {
         }
         
         
-        public ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
+        public static ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
             ArrayList<String> A_u_B = listInterno;
             
             for(Object i: listInterno){
@@ -54,7 +54,7 @@ public class uniao {
             
         }
         
-        public ArrayList uniao(ArrayList listInterno, ArrayList listExterno){
+        public static ArrayList uniao(ArrayList listInterno, ArrayList listExterno){
             ArrayList<String> A_u_B = listInterno;
 
             for(Object i: listInterno){

@@ -67,6 +67,7 @@ public class Index extends javax.swing.JFrame {
         cbxConjuntos4 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         cbxConjuntos5 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -199,6 +200,14 @@ public class Index extends javax.swing.JFrame {
         jLabel8.setText("Conjunto ");
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 80, -1));
 
+        jButton7.setText("jButton7");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
+
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 180));
 
         jButton3.setText("Imprimir");
@@ -289,6 +298,25 @@ public class Index extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNomeActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        String nome = "a";
+        Conjunto conj1 = new Conjunto("a");
+        conj1.inserir("a");
+        conj1.inserir("b");
+        conj1.inserir("c");
+        conj1.inserir("d");
+        conj1.ConjuntoDasPartes();
+        
+ 
+        
+        
+       
+        
+        
+                
+
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -337,6 +365,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
