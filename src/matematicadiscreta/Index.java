@@ -32,7 +32,9 @@ public class Index extends javax.swing.JFrame {
         for(Conjunto conj:Conjuntos ){
             cbxConjuntos.addItem(conj.getNome());
             cbxConjuntos1.addItem(conj.getNome());
-            cbxConjuntos2.addItem(conj.getNome());          
+            cbxConjuntos2.addItem(conj.getNome());
+            cbxConjuntos3.addItem(conj.getNome()); 
+            cbxConjuntos5.addItem(conj.getNome()); 
         }
     }
     
@@ -44,6 +46,7 @@ public class Index extends javax.swing.JFrame {
         tfNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         tfElemento = new javax.swing.JTextField();
         cbxConjuntos = new javax.swing.JComboBox<>();
@@ -53,28 +56,45 @@ public class Index extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         tfSaida = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
-        cbxConjuntos2 = new javax.swing.JComboBox<>();
+        cbxConjuntos3 = new javax.swing.JComboBox<>();
         cbxConjuntos1 = new javax.swing.JComboBox<>();
         tfOperacao = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        cbxConjuntos2 = new javax.swing.JComboBox<>();
+        cbxConjuntos4 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        cbxConjuntos5 = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cria Conjunto"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Criar Conjunto : "));
 
-        jLabel1.setText("Nome");
+        tfNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNomeActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Criar");
+        jLabel1.setText("Nome do Conjunto");
+
+        jButton1.setText("Criar ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Atualizar Cbbox");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -83,83 +103,75 @@ public class Index extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel1)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                    .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 210, 110));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 280, 130));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Elementos"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Inserir Elementos no Conjunto : "));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel2.add(tfElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 93, 89, -1));
+        jPanel2.add(tfElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 93, 120, -1));
 
-        jPanel2.add(cbxConjuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 47, 89, -1));
+        jPanel2.add(cbxConjuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 47, 120, -1));
 
-        jButton2.setText("Inserir");
+        jButton2.setText("Inserir  ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 53, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 130, -1));
 
-        jLabel2.setText("Nome");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, -1, -1));
+        jLabel2.setText("Selecionar Conjunto");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 140, -1));
 
         jLabel3.setText("Elemento");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 73, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 200, 130));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 290, 130));
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("SAIDA"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados :"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(tfSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 16, 320, 100));
+        jPanel3.add(tfSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, 70));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 350, 130));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 310, 110));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Operações"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, -1));
+        jPanel4.add(cbxConjuntos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 90, -1));
 
         jPanel4.add(cbxConjuntos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, -1));
-        jPanel4.add(tfOperacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 100, -1));
+        jPanel4.add(tfOperacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 140, -1));
 
-        jLabel4.setText("Elemento");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
-
-        jLabel5.setText("Conjunto 1 ");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jLabel4.setText("Digite um Elemento");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         jLabel6.setText("Conjunto 2 ");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
-
-        jButton3.setText("Imprimir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         jButton5.setText("Pertence");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -167,25 +179,40 @@ public class Index extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, -1));
 
-        jButton6.setText("Contem");
+        jButton6.setText("Contém");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 140, -1));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 370, 180));
+        jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, -1));
 
-        jButton4.setText("Atualizar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jPanel4.add(cbxConjuntos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, -1));
+
+        jLabel7.setText("Conjunto 1 ");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 80, -1));
+
+        jLabel8.setText("Conjunto ");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 80, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 180));
+
+        jButton3.setText("Imprimir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 120, -1));
+
+        getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 120, -1));
+
+        jLabel5.setText("Escolha o Conjunto ");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 130, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,15 +241,17 @@ public class Index extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         cbxConjuntos.removeAll();
-        cbxConjuntos1.removeAll();        
+        cbxConjuntos1.removeAll(); 
         cbxConjuntos2.removeAll();
+        cbxConjuntos3.removeAll();
+        cbxConjuntos5.removeAll();
         Cbx();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
        
         for(Conjunto conj:Conjuntos ){
-               if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
+               if(cbxConjuntos3.getSelectedItem().equals(conj.getNome())){
                    String elemento = tfOperacao.getText();
                    if (conj.pertence(tfOperacao.getText()).equals(true)){    
                        tfSaida.setText(elemento + " ∈ "+ conj.getNome());
@@ -255,6 +284,10 @@ public class Index extends javax.swing.JFrame {
             tfSaida.setText("não contem");
         }    
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void tfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,6 +328,9 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbxConjuntos;
     private javax.swing.JComboBox<String> cbxConjuntos1;
     private javax.swing.JComboBox<String> cbxConjuntos2;
+    private javax.swing.JComboBox<String> cbxConjuntos3;
+    private javax.swing.JComboBox<String> cbxConjuntos4;
+    private javax.swing.JComboBox<String> cbxConjuntos5;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -307,6 +343,8 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
