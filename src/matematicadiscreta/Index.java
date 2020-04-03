@@ -45,12 +45,12 @@ public class Index extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         tfNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        JBcriar = new javax.swing.JButton();
+        JBatualizarCBox = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         tfElemento = new javax.swing.JTextField();
         cbxConjuntos = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        JBinserirElementos = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -61,21 +61,21 @@ public class Index extends javax.swing.JFrame {
         tfOperacao = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        JBpertinencia = new javax.swing.JButton();
+        JBcontinencia = new javax.swing.JButton();
         cbxConjuntos2 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        JBprodutoCartesiano = new javax.swing.JButton();
+        JBsubconjProprio = new javax.swing.JButton();
+        JBuniao = new javax.swing.JButton();
+        JBinterseccao = new javax.swing.JButton();
+        JBcomplemento = new javax.swing.JButton();
+        JBdiferenca = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        JBconjDasPartes = new javax.swing.JButton();
+        JBimprimir = new javax.swing.JButton();
         cbxConjuntos5 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -93,17 +93,17 @@ public class Index extends javax.swing.JFrame {
 
         jLabel1.setText("Nome do Conjunto");
 
-        jButton1.setText("Criar ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JBcriar.setText("Criar ");
+        JBcriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                JBcriarActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Atualizar Cbbox");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        JBatualizarCBox.setText("Atualizar Cbbox");
+        JBatualizarCBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                JBatualizarCBoxActionPerformed(evt);
             }
         });
 
@@ -118,8 +118,8 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JBatualizarCBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JBcriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -132,9 +132,9 @@ public class Index extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(JBcriar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4)))
+                        .addComponent(JBatualizarCBox)))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -146,13 +146,13 @@ public class Index extends javax.swing.JFrame {
 
         jPanel2.add(cbxConjuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 47, 120, -1));
 
-        jButton2.setText("Inserir  ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        JBinserirElementos.setText("Inserir  ");
+        JBinserirElementos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                JBinserirElementosActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 130, -1));
+        jPanel2.add(JBinserirElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 130, -1));
 
         jLabel2.setText("Selecionar Conjunto");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 140, -1));
@@ -182,21 +182,21 @@ public class Index extends javax.swing.JFrame {
         jLabel6.setText("Conjunto 2 ");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
-        jButton5.setText("Pertence");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        JBpertinencia.setText("Pertence");
+        JBpertinencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                JBpertinenciaActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 100, -1));
+        jPanel4.add(JBpertinencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 100, -1));
 
-        jButton6.setText("Contém");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        JBcontinencia.setText("Contém");
+        JBcontinencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                JBcontinenciaActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, -1));
+        jPanel4.add(JBcontinencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, -1));
 
         jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 100, -1));
 
@@ -206,28 +206,28 @@ public class Index extends javax.swing.JFrame {
         jLabel8.setText("Conjunto :");
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 80, 20));
 
-        jButton7.setText("Subconjunto");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        JBprodutoCartesiano.setText("Produto Cartesiano");
+        JBprodutoCartesiano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                JBprodutoCartesianoActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 110, -1));
+        jPanel4.add(JBprodutoCartesiano, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 150, -1));
 
-        jButton8.setText("Subconjunto próprio");
-        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 160, -1));
+        JBsubconjProprio.setText("Subconjunto próprio");
+        jPanel4.add(JBsubconjProprio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 160, -1));
 
-        jButton9.setText("União");
-        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
+        JBuniao.setText("União");
+        jPanel4.add(JBuniao, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
 
-        jButton10.setText("Intersecção");
-        jPanel4.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+        JBinterseccao.setText("Intersecção");
+        jPanel4.add(JBinterseccao, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
 
-        jButton11.setText("Complemento");
-        jPanel4.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
+        JBcomplemento.setText("Complemento");
+        jPanel4.add(JBcomplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
-        jButton12.setText("Diferença");
-        jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+        JBdiferenca.setText("Diferença");
+        jPanel4.add(JBdiferenca, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         jLabel9.setText("Verificar a Existencia de um Elemento em Determinado Conjunto:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
@@ -235,18 +235,18 @@ public class Index extends javax.swing.JFrame {
         jLabel10.setText("Operações entre conjuntos:");
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
-        jButton13.setText("Conjunto das Partes");
-        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, -1));
+        JBconjDasPartes.setText("Conjunto das Partes");
+        jPanel4.add(JBconjDasPartes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 250));
 
-        jButton3.setText("Imprimir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        JBimprimir.setText("Imprimir");
+        JBimprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                JBimprimirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 120, -1));
+        getContentPane().add(JBimprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 120, -1));
 
         getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 120, -1));
 
@@ -259,38 +259,38 @@ public class Index extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void JBcriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBcriarActionPerformed
         Conjunto Conj = new Conjunto(tfNome.getText());
         Conjuntos.add(Conj);
     
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_JBcriarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void JBinserirElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinserirElementosActionPerformed
            for(Conjunto conj:Conjuntos ){
                if(cbxConjuntos.getSelectedItem().equals(conj.getNome())){
                    conj.inserir(tfElemento.getText());
                }
            }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_JBinserirElementosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void JBimprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBimprimirActionPerformed
             for(Conjunto conj:Conjuntos ){
                if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
                    tfSaida.setText(conj.imprimir());
                }
            }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_JBimprimirActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void JBatualizarCBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBatualizarCBoxActionPerformed
         cbxConjuntos.removeAll();
         cbxConjuntos1.removeAll(); 
         cbxConjuntos2.removeAll();
         cbxConjuntos3.removeAll();
         cbxConjuntos5.removeAll();
         Cbx();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_JBatualizarCBoxActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void JBpertinenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBpertinenciaActionPerformed
        
         for(Conjunto conj:Conjuntos ){
                if(cbxConjuntos3.getSelectedItem().equals(conj.getNome())){
@@ -304,9 +304,9 @@ public class Index extends javax.swing.JFrame {
                   
                }
            }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_JBpertinenciaActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void JBcontinenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBcontinenciaActionPerformed
         Conjunto conj1 = null;
         Conjunto conj2 = null;
         
@@ -325,13 +325,13 @@ public class Index extends javax.swing.JFrame {
         else{
             tfSaida.setText("não contem");
         }    
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_JBcontinenciaActionPerformed
 
     private void tfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNomeActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void JBprodutoCartesianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBprodutoCartesianoActionPerformed
         String nome = "a";
         Conjunto conj1 = new Conjunto("a");
         conj1.inserir("a");
@@ -348,7 +348,7 @@ public class Index extends javax.swing.JFrame {
         
                 
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_JBprodutoCartesianoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -386,24 +386,24 @@ public class Index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JBatualizarCBox;
+    private javax.swing.JButton JBcomplemento;
+    private javax.swing.JButton JBconjDasPartes;
+    private javax.swing.JButton JBcontinencia;
+    private javax.swing.JButton JBcriar;
+    private javax.swing.JButton JBdiferenca;
+    private javax.swing.JButton JBimprimir;
+    private javax.swing.JButton JBinserirElementos;
+    private javax.swing.JButton JBinterseccao;
+    private javax.swing.JButton JBpertinencia;
+    private javax.swing.JButton JBprodutoCartesiano;
+    private javax.swing.JButton JBsubconjProprio;
+    private javax.swing.JButton JBuniao;
     private javax.swing.JComboBox<String> cbxConjuntos;
     private javax.swing.JComboBox<String> cbxConjuntos1;
     private javax.swing.JComboBox<String> cbxConjuntos2;
     private javax.swing.JComboBox<String> cbxConjuntos3;
     private javax.swing.JComboBox<String> cbxConjuntos5;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
