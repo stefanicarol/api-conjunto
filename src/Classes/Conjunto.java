@@ -93,15 +93,16 @@ public class Conjunto  {
  
   
     
-    public String uniao(ArrayList listElementos){
+    public ArrayList<String> uniao(ArrayList listElementos){
         
  
-        if (uniao.elementoNeutro(listElementos).equals(true)){
-            return imprimir();
+        if (uniao.elementoNeutro(listElementos) == true){
+            return getElementos();
         }
+
         
         else if(uniao.idempotencia(elementos,listElementos).equals(true)){
-            return imprimir();
+            return getElementos();
         }
         
         // falta comunitativa 
@@ -116,9 +117,25 @@ public class Conjunto  {
     }
     
    
-    public String Intersecçao(){
-        if(Interseccao.)
+    public ArrayList<String> Intersecçao(ArrayList listElementos, ArrayList ConjuntoUniverso){
         
+        if(Interseccao.elementoNeutro(elementos, ConjuntoUniverso) == true){
+            return getElementos();
+        }
+        
+        else if(Interseccao.idempotencia(elementos,listElementos).equals(true)){
+            return getElementos();
+        }
+        
+        else if(Interseccao.comutativa(elementos,listElementos).equals(true)){ 
+            return null;
+            
+        }
+        
+        else{
+            return Interseccao.Interseccao(elementos,listElementos);
+            
+        }   
         
     }
     

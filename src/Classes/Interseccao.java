@@ -17,7 +17,7 @@ public class Interseccao {
         
     }
     
-    public boolean elementoNeutro(ArrayList listInterno ,ArrayList listExternoUniverso){
+    public static boolean elementoNeutro(ArrayList listInterno ,ArrayList listExternoUniverso){
             Boolean status = null;
             for(Object i: listInterno){
                 if(listExternoUniverso.equals(i)){
@@ -32,7 +32,7 @@ public class Interseccao {
     
     
     
-    public Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){ 
+    public static Boolean idempotencia(ArrayList listInterno, ArrayList listExterno){ 
             Boolean status = null;
             for(Object i: listInterno){
                 if(listExterno.equals(i)){
@@ -45,7 +45,7 @@ public class Interseccao {
             return status;  
         }
     
-    public ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
+    public static ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
             ArrayList<String> A_u_B = listInterno;
             
             for(Object i: listExterno){
@@ -55,7 +55,7 @@ public class Interseccao {
             
         }
     
-    public ArrayList Interseccao(ArrayList listInterno, ArrayList listExterno){
+    public static ArrayList Interseccao(ArrayList listInterno, ArrayList listExterno){
         ArrayList<String> Result = new ArrayList();
         
         for(Object i:listExterno){

@@ -45,6 +45,7 @@ public class uniao {
         
         
         public static ArrayList comutativa(ArrayList listInterno, ArrayList listExterno){
+            
             ArrayList<String> A_u_B = listInterno;
             
             for(Object i: listInterno){
