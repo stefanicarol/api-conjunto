@@ -78,6 +78,7 @@ public class Index extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         cbxConjuntos5 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -165,7 +166,7 @@ public class Index extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel3.add(tfSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, 70));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 310, 110));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 310, 110));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Operações"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -232,7 +233,7 @@ public class Index extends javax.swing.JFrame {
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
         jLabel10.setText("Operações entre conjuntos:");
-        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, -1, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jButton13.setText("Conjunto das Partes");
         jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
@@ -245,12 +246,15 @@ public class Index extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 120, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 120, -1));
 
-        getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 120, -1));
+        getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 120, -1));
 
         jLabel5.setText("Escolha o Conjunto ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 130, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 130, -1));
+
+        jLabel11.setText("Imprimir um Determinado Conjunto:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -402,6 +406,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
