@@ -224,10 +224,10 @@ public class Index extends javax.swing.JFrame {
         jPanel4.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         jButton11.setText("Complemento");
-        jPanel4.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+        jPanel4.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
 
         jButton12.setText("Diferença");
-        jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, -1, -1));
+        jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
 
         jLabel9.setText("Verificar a Existencia de um Elemento em Determinado Conjunto:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
@@ -236,7 +236,7 @@ public class Index extends javax.swing.JFrame {
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jButton13.setText("Conjunto das Partes");
-        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 250));
 
