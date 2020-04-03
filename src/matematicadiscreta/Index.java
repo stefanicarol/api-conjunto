@@ -64,10 +64,17 @@ public class Index extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         cbxConjuntos2 = new javax.swing.JComboBox<>();
-        cbxConjuntos4 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         cbxConjuntos5 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -144,7 +151,7 @@ public class Index extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 130, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 130, -1));
 
         jLabel2.setText("Selecionar Conjunto");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 140, -1));
@@ -158,21 +165,21 @@ public class Index extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel3.add(tfSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, 70));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 310, 110));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 310, 110));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Operações"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.add(cbxConjuntos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 90, -1));
+        jPanel4.add(cbxConjuntos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 90, -1));
 
-        jPanel4.add(cbxConjuntos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, -1));
-        jPanel4.add(tfOperacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 140, -1));
+        jPanel4.add(cbxConjuntos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 100, -1));
+        jPanel4.add(tfOperacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 90, -1));
 
-        jLabel4.setText("Digite um Elemento");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+        jLabel4.setText("Digite um Elemento:");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, 20));
 
         jLabel6.setText("Conjunto 2 ");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
         jButton5.setText("Pertence");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +187,7 @@ public class Index extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 100, -1));
 
         jButton6.setText("Contém");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -188,27 +195,49 @@ public class Index extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 140, -1));
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, -1));
 
-        jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, -1));
-
-        jPanel4.add(cbxConjuntos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, -1));
+        jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 100, -1));
 
         jLabel7.setText("Conjunto 1 ");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 80, -1));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 80, -1));
 
-        jLabel8.setText("Conjunto ");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 80, -1));
+        jLabel8.setText("Conjunto :");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 80, 20));
 
-        jButton7.setText("jButton7");
+        jButton7.setText("Subconjunto");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
+        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 110, -1));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 180));
+        jButton8.setText("Subconjunto próprio");
+        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 160, -1));
+
+        jButton9.setText("União");
+        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
+
+        jButton10.setText("Intersecção");
+        jPanel4.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+
+        jButton11.setText("Complemento");
+        jPanel4.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+
+        jButton12.setText("Diferença");
+        jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, -1, -1));
+
+        jLabel9.setText("Verificar a Existencia de um Elemento em Determinado Conjunto:");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+
+        jLabel10.setText("Operações entre conjuntos:");
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, -1, -1));
+
+        jButton13.setText("Conjunto das Partes");
+        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 250));
 
         jButton3.setText("Imprimir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -216,12 +245,12 @@ public class Index extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 120, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 120, -1));
 
-        getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 120, -1));
+        getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 120, -1));
 
         jLabel5.setText("Escolha o Conjunto ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 130, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 130, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -357,16 +386,22 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbxConjuntos1;
     private javax.swing.JComboBox<String> cbxConjuntos2;
     private javax.swing.JComboBox<String> cbxConjuntos3;
-    private javax.swing.JComboBox<String> cbxConjuntos4;
     private javax.swing.JComboBox<String> cbxConjuntos5;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -374,6 +409,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
