@@ -85,8 +85,26 @@ public class Conjunto  {
             }
     
     
-    public Boolean contem_propriamente(){
-        return true;
+    public Boolean contem_propriamente(ArrayList listElementos){
+        boolean Status = true;
+        
+        for(Object el: listElementos){
+            if(elementos.equals(el)){
+                Status  = false; // não e conjunto propriamente
+            }else{
+                Status = true;
+            }
+        }
+        
+        if(Status == true){
+            boolean Status2 = true;
+            for(Object el: elementos){
+                if(! listElementos.equals(el)){
+                    Status2 = false;           
+                }    
+            }     
+        }  
+        return Status;
     }
     
     
@@ -105,7 +123,7 @@ public class Conjunto  {
             return getElementos();
         }
         
-        // falta comunitativa 
+        
         else if(uniao.comutativa(elementos,listElementos).equals(true)){ 
             return null;
             
@@ -139,9 +157,6 @@ public class Conjunto  {
         
     }
     
-    
-  
-    
     public ArrayList Complemento(ArrayList listElementos){
         ArrayList<String> Result = listElementos;
         
@@ -167,7 +182,7 @@ public class Conjunto  {
         
     }
     
-    public void ConjuntoDasPartes(){
+    public ArrayList<String> ConjuntoDasPartes(){
         ArrayList<String> Result = new ArrayList();
 
         
@@ -184,12 +199,13 @@ public class Conjunto  {
         }
  
         
-        Result.add("{" + elementos + "}"); 
+        Result.add("{" + elementos + "}");
         System.out.print(Result);
+        return Result;
     }
     
     
-    public void ProdutoCartesiano(ArrayList listElementos){
+    public ArrayList<String> ProdutoCartesiano(ArrayList listElementos){
         ArrayList<String> Result = new ArrayList();
 
         for(Object i: elementos){
@@ -200,6 +216,7 @@ public class Conjunto  {
             }
         }
         System.out.print(Result);
+        return Result;
      }
      
     public String imprimir() {

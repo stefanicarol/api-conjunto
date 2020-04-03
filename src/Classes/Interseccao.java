@@ -49,7 +49,7 @@ public class Interseccao {
             ArrayList<String> A_u_B = listInterno;
             
             for(Object i: listExterno){
-                A_u_B.add((String) i);      //AuB
+                A_u_B.add((String) i);     
             }
             return A_u_B;
             
