@@ -319,11 +319,10 @@ public class Index extends javax.swing.JFrame {
             } 
           }
         if(conj1.contem(conj2.getElementos()).equals(true)){
-            tfSaida.setText("contem");
-            
+            tfSaida.setText(conj1.getNome()+ " ⊂ " +conj2.getNome());
         }
         else{
-            tfSaida.setText("não contem");
+            tfSaida.setText(conj1.getNome()+ " ⊄ " +conj2.getNome());
         }    
     }//GEN-LAST:event_JBcontinenciaActionPerformed
 
@@ -338,16 +337,7 @@ public class Index extends javax.swing.JFrame {
         conj1.inserir("b");
         conj1.inserir("c");
         conj1.inserir("d");
-        conj1.ConjuntoDasPartes();
-        
- 
-        
-        
-       
-        
-        
-                
-
+        conj1.ConjuntoDasPartes();  
     }//GEN-LAST:event_JBprodutoCartesianoActionPerformed
 
     /**
