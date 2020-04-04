@@ -17,7 +17,7 @@ public class Interseccao {
         
     }
     
-    public static boolean elementoNeutro(ArrayList listInterno ,ArrayList listExternoUniverso){
+    public static boolean elementoNeutro(ArrayList listInterno, ArrayList listExternoUniverso){
             Boolean status = null;
             for(Object i: listInterno){
                 if(listExternoUniverso.equals(i)){
@@ -58,16 +58,15 @@ public class Interseccao {
     public static ArrayList Interseccao(ArrayList listInterno, ArrayList listExterno){
         ArrayList<String> Result = new ArrayList();
         
-        for(Object i:listExterno){
-            if(listExterno.equals(i)){
+        for(Object i:listInterno){
+            if(listExterno.contains(i)){
                 Result.add((String) i);
             }   
         }
-        
         return Result;
     }
     
-    
+   
     
     
     

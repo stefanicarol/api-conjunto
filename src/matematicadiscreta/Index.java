@@ -38,6 +38,8 @@ public class Index extends javax.swing.JFrame {
         }
     }
     
+   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -54,7 +56,8 @@ public class Index extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        tfSaida = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tfSaida = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         cbxConjuntos3 = new javax.swing.JComboBox<>();
         cbxConjuntos1 = new javax.swing.JComboBox<>();
@@ -160,13 +163,18 @@ public class Index extends javax.swing.JFrame {
         jLabel3.setText("Elemento");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 73, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 290, 130));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 350, 130));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados :"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(tfSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, 70));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 310, 110));
+        tfSaida.setColumns(20);
+        tfSaida.setRows(5);
+        jScrollPane1.setViewportView(tfSaida);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 340, 120));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 380, 160));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Operações"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -215,18 +223,38 @@ public class Index extends javax.swing.JFrame {
         jPanel4.add(JBprodutoCartesiano, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 150, -1));
 
         JBsubconjProprio.setText("Subconjunto próprio");
+        JBsubconjProprio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBsubconjProprioActionPerformed(evt);
+            }
+        });
         jPanel4.add(JBsubconjProprio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 160, -1));
 
         JBuniao.setText("União");
+        JBuniao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBuniaoActionPerformed(evt);
+            }
+        });
         jPanel4.add(JBuniao, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
 
         JBinterseccao.setText("Intersecção");
+        JBinterseccao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBinterseccaoActionPerformed(evt);
+            }
+        });
         jPanel4.add(JBinterseccao, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
 
         JBcomplemento.setText("Complemento");
         jPanel4.add(JBcomplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         JBdiferenca.setText("Diferença");
+        JBdiferenca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBdiferencaActionPerformed(evt);
+            }
+        });
         jPanel4.add(JBdiferenca, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         jLabel9.setText("Verificar a Existencia de um Elemento em Determinado Conjunto:");
@@ -236,9 +264,14 @@ public class Index extends javax.swing.JFrame {
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         JBconjDasPartes.setText("Conjunto das Partes");
+        JBconjDasPartes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBconjDasPartesActionPerformed(evt);
+            }
+        });
         jPanel4.add(JBconjDasPartes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 580, 250));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 640, 250));
 
         JBimprimir.setText("Imprimir");
         JBimprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -331,15 +364,87 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNomeActionPerformed
 
     private void JBprodutoCartesianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBprodutoCartesianoActionPerformed
-        String nome = "a";
-        Conjunto conj1 = new Conjunto("a");
-        conj1.inserir("a");
-        conj1.inserir("b");
-        conj1.inserir("c");
-        conj1.inserir("d");
-        conj1.ConjuntoDasPartes();  
+        Conjunto conj1 = null;
+        Conjunto conj2 = null;
+        
+        
+        for(Conjunto conj:Conjuntos ){
+            if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
+                conj1 = conj;
+            }
+            if(cbxConjuntos2.getSelectedItem().equals(conj.getNome())){
+                conj2 = conj;
+            } 
+          }    
+        ArrayList<String> result = conj1.ProdutoCartesiano(conj2.getElementos());
+        tfSaida.append(result.toString()); 
     }//GEN-LAST:event_JBprodutoCartesianoActionPerformed
 
+    private void JBsubconjProprioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsubconjProprioActionPerformed
+            for(Conjunto conj:Conjuntos ){
+               if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
+                  
+                   } 
+               } 
+    }//GEN-LAST:event_JBsubconjProprioActionPerformed
+
+    private void JBconjDasPartesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBconjDasPartesActionPerformed
+       for(Conjunto conj:Conjuntos ){
+               if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){ 
+                        ArrayList<String> result = conj.ConjuntoDasPartes();  
+                        tfSaida.append("P(" + conj.getNome() + ") = {∅ " + result.toString()+ "}"); 
+               } 
+        } 
+    }//GEN-LAST:event_JBconjDasPartesActionPerformed
+
+    private void JBuniaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBuniaoActionPerformed
+          
+    }//GEN-LAST:event_JBuniaoActionPerformed
+
+    private void JBdiferencaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBdiferencaActionPerformed
+        Conjunto conj1 = null;
+        Conjunto conj2 = null;
+        
+        
+        for(Conjunto conj:Conjuntos ){
+            if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
+                conj1 = conj;
+            }
+            if(cbxConjuntos2.getSelectedItem().equals(conj.getNome())){
+                conj2 = conj;
+            } 
+          }    
+        ArrayList<String> result = conj1.Diferenca(conj2.getElementos());
+        tfSaida.append(result.toString()); 
+    }//GEN-LAST:event_JBdiferencaActionPerformed
+
+    private void JBinterseccaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinterseccaoActionPerformed
+        Conjunto conj1 = null;
+        Conjunto conj2 = null;
+        
+        //A : 1,2,3
+        //B: 2,3
+        // 2,3
+        for(Conjunto conj:Conjuntos ){
+            if(cbxConjuntos1.getSelectedItem().equals(conj.getNome())){
+                conj1 = conj;
+            }
+            if(cbxConjuntos2.getSelectedItem().equals(conj.getNome())){
+                conj2 = conj;
+            } 
+          }    
+        ArrayList<String> result = conj1.Interseccao(conj2.getElementos(), Universo() );
+        tfSaida.append(result.toString()); 
+    }//GEN-LAST:event_JBinterseccaoActionPerformed
+    public ArrayList Universo(){ 
+        ArrayList<String> Universo = new ArrayList();
+        for(Conjunto conj : Conjuntos){ 
+            for(Object i :  conj.getElementos() ){
+                Universo.add(i.toString());
+            }
+        }
+        return Universo;
+    }
     /**
      * @param args the command line arguments
      */
@@ -409,9 +514,10 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField tfElemento;
     private javax.swing.JTextField tfNome;
     private javax.swing.JTextField tfOperacao;
-    private javax.swing.JTextField tfSaida;
+    private javax.swing.JTextArea tfSaida;
     // End of variables declaration//GEN-END:variables
 }

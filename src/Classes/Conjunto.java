@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Classes;
 
 import java.util.ArrayList;
@@ -89,7 +84,7 @@ public class Conjunto  {
         boolean Status = true;
         
         for(Object el: listElementos){
-            if(elementos.equals(el)){
+            if(elementos.contains(el)){
                 Status  = false; // não e conjunto propriamente
             }else{
                 Status = true;
@@ -99,7 +94,7 @@ public class Conjunto  {
         if(Status == true){
             boolean Status2 = true;
             for(Object el: elementos){
-                if(! listElementos.equals(el)){
+                if(! listElementos.contains(el)){
                     Status2 = false;           
                 }    
             }     
@@ -135,7 +130,7 @@ public class Conjunto  {
     }
     
    
-    public ArrayList<String> Intersecçao(ArrayList listElementos, ArrayList ConjuntoUniverso){
+    public ArrayList<String> Interseccao(ArrayList listElementos, ArrayList ConjuntoUniverso){
         
         if(Interseccao.elementoNeutro(elementos, ConjuntoUniverso) == true){
             return getElementos();
@@ -161,7 +156,7 @@ public class Conjunto  {
         ArrayList<String> Result = listElementos;
         
         for(Object i : elementos){
-            if(listElementos.equals(i)){
+            if(listElementos.contains(i)){
                 Result.remove(i);
             }   
         }
@@ -173,13 +168,14 @@ public class Conjunto  {
         ArrayList<String> Result = listElementos;
         
         for(Object i : elementos){
-            if(listElementos.equals(i)){
-                Result.remove(i);
+            if(listElementos.contains(i)){
+             Result.remove(i);
+            }else{
+              Result.add(i.toString());
             }
         }
         return  Result;
-        
-        
+         
     }
     
     public ArrayList<String> ConjuntoDasPartes(){
