@@ -195,7 +195,7 @@ public class Index extends javax.swing.JFrame {
                 JBcontinenciaActionPerformed(evt);
             }
         });
-        jPanel4.add(JBcontinencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 90, -1));
+        jPanel4.add(JBcontinencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 90, -1));
 
         jPanel4.add(cbxConjuntos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 100, -1));
 
@@ -219,7 +219,7 @@ public class Index extends javax.swing.JFrame {
                 JBsubconjProprioActionPerformed(evt);
             }
         });
-        jPanel4.add(JBsubconjProprio, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 160, -1));
+        jPanel4.add(JBsubconjProprio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 160, -1));
 
         JBuniao.setText("União");
         JBuniao.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +270,7 @@ public class Index extends javax.swing.JFrame {
                 JBimprimirActionPerformed(evt);
             }
         });
-        getContentPane().add(JBimprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 120, -1));
+        getContentPane().add(JBimprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 120, -1));
 
         getContentPane().add(cbxConjuntos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 120, 30));
 
@@ -278,7 +278,7 @@ public class Index extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 130, -1));
 
         jLabel11.setText("Imprimir um Determinado Conjunto:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
