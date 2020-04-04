@@ -7,7 +7,7 @@ package matematicadiscreta;
 
 /**
  *
- * @author pedro.def
+ * @author Ana Carolina Marinho
  */
 public class MatematicaDiscreta {
 
